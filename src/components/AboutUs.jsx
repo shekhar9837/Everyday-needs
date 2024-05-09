@@ -2,21 +2,21 @@ import React from 'react'
 
 const AboutUs = () => {
   return (
-    <div className='w-full  flex flex-col    px-4 mt-20 mb-20'>
+    <div className='flex flex-col   px-4 md:mt-20 md:mb-20 '>
       
-      <div className=''>
-        <div className='px-4'>
+      <div className='flex flex-col '>
+        <div className='md:px-32 px-2'>
         <h1 className='text-[1.2rem] pt-4'>Visit Us:</h1>
         <h1 className='text-[1.2rem] pb-4'>Ponsonby Store</h1>
         <h5 className='text-[0.8rem] inline border-b-[1px] border-black'>Shop all</h5>
         </div>
 
-        <div className='flex items-start justify-end gap-20  px-4'>
-            <div className='w-1/2 '>
+        <div className='flex items-start justify-center gap-20  px-4 '>
+            <div className='md:w-1/3 md:py-0 py-8'>
             <img src="/img/AboutUsFront.webp" alt="" />
             <h5 className='text-[0.8rem] pt-2 '>1. Our Ponsonby store</h5>
             </div>
-            <div className='w-1/4 '>
+            <div className='md:w-1/5 md:flex flex-col hidden '>
                 <img src="/img/gift.webp" className='object-cover'  alt="" />
                 <h5 className='text-[0.8rem] pt-2'>2. Everyday Needs Gift Wrapping</h5>
 
