@@ -8,20 +8,25 @@ const Navbar = () => {
       <div className="w-full  flex items-center justify-between md:px-0 px-4">
         <div className="md:w-[15%]  flex">
           <div className="  md:inline flex gap-1  md:text-3xl text-[1.2rem] font-bold md:px-6 py-4">
+          <Link to='/'>
             <div className="md:flex hidden border-t-2 border-black w-[1rem]"></div>
             <h1 className="">everyday</h1>
             <div className=" md:flex hidden border-t-2 border-black w-[1rem]"></div>
             <h1 className="">needs</h1>
             <div className="md:flex hidden border-t-2 border-black w-[1rem]"></div>
             {/* <h1 className="border-y-2  border-black">e</h1> <h1>veryday</h1> */}
+          </Link>
           </div>
         </div>
 
-        <div className="w-[70%]  md:flex hidden px-10 ">
-          <div className="flex justify-start items-center gap-10 px-4">
+        <div className="w-[70%]  md:flex hidden">
+          <div className="flex justify-start items-center gap-10 pr-4">
             <>
               <ul className="py-4">
-                <li >Shop All</li>
+             <Link to='categories/all'>
+               <li >Shop All</li>
+             </Link>
+            
                 <li >New</li>
                 <li >Back in Stock</li>
               </ul>
