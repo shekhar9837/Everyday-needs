@@ -31,6 +31,8 @@ const ScrollableContent = () => {
     <div className="">
       <div className="flex flex-col items-center  justify-center">
         <div className=" flex md:flex-row flex-col md:items-start items-center justify-center md:mt-20 md:gap-20 py-24 ">
+         <Link to='categories/back-in-stock'>
+
           <div className=" p-1 text-[1.8rem] font-regular md:px-6">
             <img src="/img/Mug.webp" className="object-fit md:w-[20rem] w-[15rem]" alt="" />
             <h1 className="pt-3  ">Shop //</h1>
@@ -39,6 +41,7 @@ const ScrollableContent = () => {
               Shop Back in Stock
             </h5>
           </div>
+         </Link>
 
           <div className="p-1 text-[1.8rem] md:ml-12 font-regular md:px-6">
             <img src="/img/knife.webp" className="object-fit  md:w-[30rem] w-[20rem]  " alt="" />

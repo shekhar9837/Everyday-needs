@@ -33,6 +33,10 @@ const router = createBrowserRouter([
             {
               path:'all',
               element: <ShopAll/>,
+            },
+            {
+              path:'back-in-stock',
+              element: <ShopAll/>,
             }
           ]
       },
