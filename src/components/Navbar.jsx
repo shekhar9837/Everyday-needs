@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import "../App.css";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
-import { Input } from "@mui/material";
 import { IoIosSearch } from "react-icons/io";
 
 const Navbar = () => {
@@ -16,11 +15,13 @@ const Navbar = () => {
 
   const PageUp=()=>{
     window.scrollTo({top:(0,0), behavior:'smooth'});
+    setIsOpen(false);
   }
+  
 
   return (
     <nav className="sticky bg-white top-0 z-10 flex items-center text-xs">
-      <div className="w-full  flex items-center justify-between md:px-0 px-4">
+      <div className="w-full  flex items-center justify-between md:px-0 px-2">
         <div className="md:w-[15%]  flex items-center justify-center ">
           <div onClick={() => toogleMenu()} className="md:hidden">
             <CiMenuBurger
@@ -44,34 +45,34 @@ const Navbar = () => {
           <div className="flex justify-start items-center gap-20 pr-4 text-[0.7rem]">
             <>
               <ul className="py-4">
-                <Link to="categories/all">
+                <Link to="categories/all"  onClick={()=>PageUp()}>
                   <li>Shop All</li>
                 </Link>
-                <Link to="categories/new">
+                <Link to="categories/new"  onClick={()=>PageUp()}>
                   <li>New</li>
                 </Link>
-                <Link to="categories/back-in-stock">
+                <Link to="categories/back-in-stock"  onClick={()=>PageUp()}>
                   <li>Back in Stock</li>
                 </Link>
               </ul>
               <ul>
-                <Link to="categories/bedroom"><li>Bedroom</li></Link>
-                <Link to="categories/bathroom"> <li>Bathroom</li></Link>
-                <Link to="categories/living"> <li>Living</li></Link>
+                <Link to="categories/bedroom"  onClick={()=>PageUp()}><li>Bedroom</li></Link>
+                <Link to="categories/bathroom"  onClick={()=>PageUp()}> <li>Bathroom</li></Link>
+                <Link to="categories/living" onClick={()=>PageUp()}> <li>Living</li></Link>
               </ul>
               <ul>
-                <Link to="categories/kitchen-table"> <li>Kitchen & Table</li></Link>
-                <Link to="categories/houseKeeping"> <li>HouseKeeping</li></Link>
-                <Link to="categories/outdoors"> <li>Outdoors</li></Link>
+                <Link to="categories/kitchen-table" onClick={()=>PageUp()}> <li>Kitchen & Table</li></Link>
+                <Link to="categories/houseKeeping" onClick={()=>PageUp()}> <li>HouseKeeping</li></Link>
+                <Link to="categories/outdoors" onClick={()=>PageUp()}> <li>Outdoors</li></Link>
               </ul>
               <ul>
-                <Link to="categories/office-paper"> <li>Office & Paper</li></Link>
-                <Link to="categories/apparel"> <li>Apparel</li></Link>
-                <Link to="categories/baby-child"> <li>Baby & Child</li></Link>
+                <Link to="categories/office-paper"  onClick={()=>PageUp()}> <li>Office & Paper</li></Link>
+                <Link to="categories/apparel"  onClick={()=>PageUp()}> <li>Apparel</li></Link>
+                <Link to="categories/baby-child" onClick={()=>PageUp()}> <li>Baby & Child</li></Link>
               </ul>
               <ul>
-                <Link to="categories/gifting"> <li>Gifting</li></Link>
-                <Link to="categories/sale"> <li>Sale</li></Link>
+                <Link to="categories/gifting" onClick={()=>PageUp()}> <li>Gifting</li></Link>
+                <Link to="categories/sale" onClick={()=>PageUp()}> <li>Sale</li></Link>
                 <li>Search</li>
               </ul>
             </>
@@ -132,29 +133,24 @@ const Navbar = () => {
         </div>
         <div className="">
           <ul>
-            <li>Shop All</li>
-            <li>New</li>
-            <li>Back in Stock</li>
+                <Link to="categories/all" onClick={()=>PageUp()}><li>Shop All</li></Link>
+                <Link to="categories/new" onClick={()=>PageUp()}><li>New</li></Link>
+                <Link to="categories/back-in-stock" onClick={()=>PageUp()}><li>Back in Stock</li></Link>
           </ul>
           <div className="border-b border-white w-3 mt-3 mb-3"></div>
           <ul>
-                <Link to="categories/bedroom">
-                  <li>Bedroom</li>
-                </Link>
-                <li>Bathroom</li>
-                <li>Living</li>
-                <li>Kitchen & Table</li>
-                <li>HouseKeeping</li>
-                <li>Outdoors</li>
-             
-             
-                <li>Office & Paper</li>
-                <li>Apparel</li>
-                <li>Baby & Child</li>
-             
-                <li>Gifting</li>
-                <li>Sale</li>
-                <li>Search</li>
+                <Link to="categories/bedroom" onClick={()=>PageUp()}><li>Bedroom</li></Link>
+                <Link to="categories/bathroom" onClick={()=>PageUp()}><li>Bathroom</li></Link>
+                <Link to="categories/living" onClick={()=>PageUp()}><li>Living</li></Link>
+                <Link to="categories/kitchen-table" onClick={()=>PageUp()}><li>Kitchen & Table</li></Link>
+                <Link to="categories/houseKeeping" onClick={()=>PageUp()}><li>HouseKeeping</li></Link>
+                <Link to="categories/outdoors" onClick={()=>PageUp()}><li>Outdoors</li></Link>
+                <Link to="categories/office-paper" onClick={()=>PageUp()}><li>Office & Paper</li></Link>
+                <Link to="categories/apparel" onClick={()=>PageUp()}><li>Apparel</li></Link>
+                <Link to="categories/baby-child" onClick={()=>PageUp()}><li>Baby & Child</li></Link>
+                <Link to="categories/gifting" onClick={()=>PageUp()}><li>Gifting</li></Link>
+                <Link to="categories/sale" onClick={()=>PageUp()}><li>Sale</li></Link>
+      
               </ul>
         </div>
         </div>

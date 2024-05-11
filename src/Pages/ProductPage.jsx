@@ -16,8 +16,10 @@ const ProductPage = () => {
   }
 
   const sections = product.description
-    .split("<!-- split -->")
-    .map((section) => section.split("<p>").filter(Boolean));
+  ? product.description
+      .split("<!-- split -->")
+      .map((section) => section.split("<p>").filter(Boolean))
+  : [];
 
   // Render the product details
   return (
@@ -61,15 +63,17 @@ const ProductPage = () => {
                     dangerouslySetInnerHTML={{ __html: paragraph }}
                   />
                 ))}
-                <div className="mt-4 ">
-                  <h4 className="font-semibold">Dimensions</h4>
-                  {sections[1].map((paragraph, index) => (
-                    <p
-                      key={index}
-                      dangerouslySetInnerHTML={{ __html: paragraph }}
-                    />
-                  ))}
-                </div>
+                {sections && sections.length > 1 && (
+                  <div className="mt-4 ">
+                    <h4 className="font-semibold">Dimensions</h4>
+                    {sections[1].map((paragraph, index) => (
+                      <p
+                        key={index}
+                        dangerouslySetInnerHTML={{ __html: paragraph }}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>
