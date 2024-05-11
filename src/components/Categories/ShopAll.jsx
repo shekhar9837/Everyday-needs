@@ -2,7 +2,8 @@ import React from "react";
 import { data } from "../../data";
 import { Link } from "react-router-dom";
 
-const ShopAll = ({PageUp}) => {
+const ShopAll = () => {
+  
   const PageUp=()=>{
     window.scrollTo({top:(0,0), behavior:'smooth'});
   }
