@@ -2,29 +2,12 @@ import React from 'react'
 import {data} from '../../data.js'
 import { Link } from 'react-router-dom';
 
-const KitchenTable = ({PageUp}) => {
+const KitchenTable = () => {
 const filterData = data.filter((item)=> item.type === 'Kitchen & Table');
-if (filterData.length === 0) {
-  return (
-    <div className=" ">
-     <div className='px-4 flex flex-col items-center justify-center my-20'>
-     <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-        No Products Found
-      </h2>
-      <p className="text-gray-600 mb-4 text-center">
-        Sorry, we couldn't find any products in this category at the moment.
-      </p>
-      <Link
-        to="/"
-        className=" bg-zinc-600 text-white text-xs px-16 py-4 hover:text-black hover:bg-white border hover:border-black "
-      >
-        Go Back Home
-      </Link>
-     </div>
-    </div>
-  );
-}
 
+const PageUp=()=>{
+  window.scrollTo({top:(0,0), behavior:'smooth'});
+}
 
   return (
     <div className='relative flex flex-col items-center justify-start '>
@@ -56,4 +39,4 @@ if (filterData.length === 0) {
   )
 }
 
-export default KitchenTable;
+export default KitchenTable
