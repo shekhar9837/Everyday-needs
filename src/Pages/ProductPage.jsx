@@ -11,7 +11,7 @@ const ProductPage = () => {
   const product = data.find((item) => item.handle === handle);
 
   // If product is not found, display a message
-  if (!product) {
+  if (!product ) {
     return <p>Product not found.</p>;
   }
 
