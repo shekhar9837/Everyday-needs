@@ -29,13 +29,13 @@ const ProductPage = () => {
               <h2 className="text-xs">{product.vendor}</h2>
               <h1 className="block mt-4">{product.title}</h1>
             </div>
-            <div className="md:w-[30%]">
+            <div className="md:w-[30%] px-4">
               <h4 className="text-xs">price</h4>
               <h4 className="mt-4">${product.price / 100}.00</h4>
             </div>
           </div>
 
-          <div className="md:w-[70%]  md:ml-6 md:mr-6 flex md:flex-row flex-col items-start justify-between px-6  mt-10">
+          <div className="md:w-[70%]  md:ml-6 md:mr-6 flex md:flex-row flex-col items-start justify-between px-6  mt-10 md:gap-10">
             <div className="md:w-[70%]">
               <img
                 className=""

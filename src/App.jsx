@@ -6,6 +6,17 @@ import ErrorPage from "./components/ErrorPage";
 import Footer from "./components/Footer";
 import Categories from "./Pages/Categories";
 import ProductPage from "./Pages/ProductPage";
+import Bedroom from "./components/Categories/Bedroom";
+import Bathroom from "./components/Categories/Bathroom";
+import Sale from "./components/Categories/Sale";
+import Gifting from "./components/Categories/Gifting";
+import OfficePaper from "./components/Categories/OfficePaper";
+import BabyChild from "./components/Categories/BabyChild";
+import Apparel from "./components/Categories/Apparel";
+import Outdoors from "./components/Categories/Outdoors";
+import KitchenTable from "./components/Categories/KitchenTable";
+import HouseKeeping from "./components/Categories/HouseKeeping";
+import Living from "./components/Categories/Living";
 
 const App = ()=> {
   return (
@@ -35,9 +46,57 @@ const router = createBrowserRouter([
               element: <ShopAll/>,
             },
             {
+              path:'new',
+              element: <ShopAll/>,
+            },
+            {
               path:'back-in-stock',
               element: <ShopAll/>,
-            }
+            },
+            {
+              path:'bedroom',
+              element: <Bedroom/>,
+            },
+            {
+              path:'bathroom',
+              element: <Bathroom/>,
+            },
+            {
+              path:'houseKeeping',
+              element: <HouseKeeping/>,
+            },
+            {
+              path:'kitchen-table',
+              element: <KitchenTable/>,
+            },
+            {
+              path:'living',
+              element: <Living/>,
+            },
+            {
+              path:'outdoors',
+              element: <Outdoors/>,
+            },
+            {
+              path:'apparel',
+              element: <Apparel/>,
+            },
+            {
+              path:'baby-child',
+              element: <BabyChild/>,
+            },
+            {
+              path:'office-paper',
+              element: <OfficePaper/>,
+            },
+            {
+              path:'gifting',
+              element: <Gifting/>,
+            },
+            {
+              path:'sale',
+              element: <Sale/>,
+            },
           ]
       },
     {
