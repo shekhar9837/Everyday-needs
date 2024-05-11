@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const KitchenTable = ({PageUp}) => {
 const filterData = data.filter((item)=> item.type === 'Kitchen & Table');
-if (!filterData.length) {
+if (filterData.length === 0) {
   return (
     <div className=" ">
      <div className='px-4 flex flex-col items-center justify-center my-20'>

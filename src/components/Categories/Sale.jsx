@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Sale = ({PageUp}) => {
 const filterData = data.filter((item)=> item.type === 'Sale');
 
-if (!filterData.length) {
+if (filterData.length === 0) {
   return (
     <div className="flex flex-col items-center justify-center h-full my-20">
       <h2 className="text-2xl font-semibold text-gray-800 mb-4">

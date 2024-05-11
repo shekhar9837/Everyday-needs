@@ -2,12 +2,12 @@ import React from 'react'
 import {data} from '../../data.js'
 import { Link } from 'react-router-dom';
 
-const BabyChild = ({PageUp}) => {
+const BabyChild = () => {
 const filterData = data.filter((item)=> item.type === 'Baby & Child');
 
-// const PageUp=()=>{
-//   window.scrollTo({top:(0,0), behavior:'smooth'});
-// }
+const PageUp=()=>{
+  window.scrollTo({top:(0,0), behavior:'smooth'});
+}
 
   return (
     <div className='relative flex flex-col items-center justify-start '>
@@ -39,4 +39,4 @@ const filterData = data.filter((item)=> item.type === 'Baby & Child');
   )
 }
 
-export default BabyChild;
+export default BabyChild

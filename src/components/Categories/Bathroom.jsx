@@ -2,12 +2,12 @@ import React from 'react'
 import {data} from '../../data.js'
 import { Link } from 'react-router-dom';
 
-const Bathroom = ({PageUp}) => {
+const Bathroom = () => {
 const filterData = data.filter((item)=> item.type === 'Bathroom');
 
-// const PageUp=()=>{
-//   window.scrollTo({top:(0,0), behavior:'smooth'});
-// }
+const PageUp=()=>{
+  window.scrollTo({top:(0,0), behavior:'smooth'});
+}
 
   return (
     <div className='relative flex flex-col items-center justify-start '>
@@ -39,4 +39,4 @@ const filterData = data.filter((item)=> item.type === 'Bathroom');
   )
 }
 
-export default Bathroom;
+export default Bathroom

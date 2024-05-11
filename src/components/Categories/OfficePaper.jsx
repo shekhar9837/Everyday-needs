@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const OfficePaper = ({PageUp}) => {
 const filterData = data.filter((item)=> item.type === 'Office & Paper');
-if (!filterData.length) {
+if (filterData.length === 0) {
   return (
     <div className=" ">
      <div className='px-4 flex flex-col items-center justify-center my-20'>
