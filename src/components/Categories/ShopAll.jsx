@@ -3,6 +3,10 @@ import { data } from "../../data";
 import { Link } from "react-router-dom";
 
 const ShopAll = ({PageUp}) => {
+  const PageUp=()=>{
+    window.scrollTo({top:(0,0), behavior:'smooth'});
+  }
+  
   return (
     
     <div className=" relative flex flex-col items-center justify-start ">
