@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="md:w-[15%]  flex items-center justify-center ">
           <div onClick={() => toogleMenu()} className="md:hidden">
             <CiMenuBurger
-              className={`h-10 w-10 px-2 ${isOpen ? "hidden" : "block"}`}
+              className={`h-6 w-6 ${isOpen ? "hidden" : "block"}`}
               onClick={() => toogleMenu()}
             />
           </div>
