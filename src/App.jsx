@@ -17,6 +17,10 @@ import Outdoors from "./components/Categories/Outdoors";
 import KitchenTable from "./components/Categories/KitchenTable";
 import HouseKeeping from "./components/Categories/HouseKeeping";
 import Living from "./components/Categories/Living";
+import AboutUs from "./Pages/AboutUs";
+import BackInStock from "./components/Categories/BackInStock";
+import New from "./components/Categories/New";
+import SearchResults from "./components/SearchResults";
 
 const App = ()=> {
   return (
@@ -47,11 +51,11 @@ const router = createBrowserRouter([
             },
             {
               path:'new',
-              element: <ShopAll/>,
+              element: <New/>,
             },
             {
               path:'back-in-stock',
-              element: <ShopAll/>,
+              element: <BackInStock/>,
             },
             {
               path:'bedroom',
@@ -102,7 +106,16 @@ const router = createBrowserRouter([
     {
       path:'products/:handle',
       element:<ProductPage/>
-    }
+    },
+    {
+      path:'pages/about-us',
+      element:<AboutUs/>
+    },
+    {
+      path:'search-results',
+      element:<SearchResults/>
+    },
+  
     ],
   },
 ]);

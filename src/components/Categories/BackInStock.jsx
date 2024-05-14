@@ -2,7 +2,7 @@ import React from "react";
 import { data } from "../../data";
 import { Link } from "react-router-dom";
 
-const ShopAll = () => {
+const BackInStock = () => {
   
   const PageUp=()=>{
     window.scrollTo({top:(0,0), behavior:'smooth'});
@@ -14,7 +14,7 @@ const ShopAll = () => {
       <div className="flex flex-col items-center  justify-centermd:mt-20 ">
         <div className="md:w-[70%] text-[1.2rem]">
       <h1 className="  px-6 mt-10">Maker:</h1>
-      <h1 className=" px-6 mb-10">Shop All</h1>
+      <h1 className=" px-6 mb-10">Back in Stock</h1>
       </div>
         <div className="md:w-[70%]  md:px-4 px-2 grid md:grid-cols-4 grid-cols-2  grid-row-auto  text-white md:gap-2 gap-0">
           {data.map((item) => (
@@ -40,4 +40,4 @@ const ShopAll = () => {
   );
 };
 
-export default ShopAll;
+export default BackInStock;

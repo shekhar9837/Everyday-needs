@@ -26,15 +26,23 @@ import AboutUs from "./AboutUs";
 //   );
 // };
 
+
+
 const ScrollableContent = () => {
+    const PageUp=()=>{
+      window.scrollTo({
+        top: (0, 0),
+        behavior: "smooth",
+      });
+    }
+
   return (
     <div className="">
       <div className="flex flex-col items-center  justify-center">
         <div className=" flex md:flex-row flex-col md:items-start items-center justify-center md:mt-20 md:gap-20 py-24 ">
-         <Link to='categories/back-in-stock'>
-
-          <div className=" p-1 text-[1.8rem] font-regular md:px-6">
-            <img src="/img/Mug.webp" className="object-fit md:w-[20rem] w-[15rem]" alt="" />
+         <Link to='categories/back-in-stock' onClick={()=>PageUp()}>
+          <div className=" p-1 text-[1.8rem] font-regular md:px-6 ">
+            <img src="/img/Mug.webp" className="object-fit md:w-[20rem] w-[15rem] " alt="" />
             <h1 className="pt-3  ">Shop //</h1>
             <h1 className="pb-3 ">Back in Stock</h1>
             <h5 className="text-[0.8rem] border-b-[1px] border-black inline ">
@@ -43,6 +51,7 @@ const ScrollableContent = () => {
           </div>
          </Link>
 
+         <Link to='categories/new' onClick={()=>PageUp()}>
           <div className="p-1 text-[1.8rem] md:ml-12 font-regular md:px-6">
             <img src="/img/knife.webp" className="object-fit  md:w-[30rem] w-[20rem]  " alt="" />
             <h5 className="text-[0.8rem]  -mb-4">New in</h5>
@@ -50,6 +59,7 @@ const ScrollableContent = () => {
               Shop New Arrivals
             </h5>
           </div>
+         </Link>  
         </div>
         <div className="flex md:flex-row flex-col  justify-center md:px-24 px-4 py-24 gap-20">
           <div className="md:w-1/6 p-2">

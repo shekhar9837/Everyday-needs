@@ -1,16 +1,15 @@
 // ProductPage.js
-import React from "react";
+import React,{useContext} from "react";
 import { useParams } from "react-router-dom";
 import { data } from "../data.js";
+import { CartContext } from '../Context/Cart'
+
 
 const ProductPage = () => {
-  // Extract the product handle from the URL parameter
   const { handle } = useParams();
-
-  // Find the product with the matching handle from the data array
   const product = data.find((item) => item.handle === handle);
+  const { addToCart} = useContext(CartContext);
 
-  // If product is not found, display a message
   if (!product ) {
     return <p>Product not found.</p>;
   }
@@ -50,7 +49,7 @@ const ProductPage = () => {
 
             <div className="md:w-[30%] ">
               <div>
-                <button className="md:mt-0 mt-10 bg-zinc-600 text-white text-xs px-16 py-4 hover:text-black hover:bg-white border hover:border-black">
+                <button onClick={()=> addToCart(product)} className="md:mt-0 mt-10 bg-zinc-600 text-white text-xs px-16 py-4 hover:text-black hover:bg-white border hover:border-black">
                   Add to Cart
                 </button>
               </div>
