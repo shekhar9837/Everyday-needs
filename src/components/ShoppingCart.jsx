@@ -2,6 +2,7 @@ import { useContext } from "react";
 import React from "react";
 import { CartContext } from "../Context/Cart";
 import { IoClose } from "react-icons/io5";
+import { motion } from "framer-motion"
 
 const ShoppingCart = ({ closeCart }) => {
   const { cartItems, addToCart, removeFromCart, clearCart, getCartTotal } =
@@ -12,7 +13,13 @@ const ShoppingCart = ({ closeCart }) => {
     className="fixed top-0 left-0 w-full h-full bg-white   opacity-90 z-9"
     onClick={closeCart}
   ></div>
-    <div className="flex flex-col  items-center justify-start z-99 absolute md:w-[32%] w-[90%] h-screen bg-[#899387] top-0 right-0  text-white px-6 ">
+    <motion.div
+      initial={{ x: "100%"}} 
+      animate={{ x: 0 }} 
+      exit={{ x: "100%"} } 
+      transition={{ type: "spring", stiffness: 200, damping: 30, ease: "easeInOut"}}
+  
+    className="flex flex-col  items-center justify-start z-99 absolute md:w-[32%] w-[90%] h-screen bg-[#899387] top-0 right-0  text-white px-6 ">
       <div className="flex h-screen flex-col items-center md:justify-between ">
         <div className="flex flex-col items-center justify-center">
         <h1 className="text-[0.7rem] px-8 py-8">Your Cart({cartItems.length})</h1>
@@ -90,7 +97,7 @@ const ShoppingCart = ({ closeCart }) => {
         </button>
       </div>
       </div>
-    </div>
+    </motion.div>
     </>
   );
 };

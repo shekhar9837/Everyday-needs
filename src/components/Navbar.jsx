@@ -8,6 +8,8 @@ import { data } from "../data";
 import { useNavigate } from "react-router-dom";
 import ShoppingCart from "./ShoppingCart";
 import {CartContext} from '../Context/Cart'
+import { motion } from "framer-motion"
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -164,7 +166,12 @@ const Navbar = () => {
         
       </div>
 
-      <div
+      <motion.div
+       initial={{ x: "100%"}} 
+       animate={{ x: 0 }} 
+       exit={{ x: "100%"} } 
+       transition={{ type: "spring", stiffness: 200, damping: 20}}
+
         className={`${
           isOpen ? "block" : "hidden"
         } md:hidden fixed flex flex-col items-start justify-start inset-0 bg-[#899387] transition-transform transform ease-in-out duration-300 w-[80%] px-6`}
@@ -174,7 +181,7 @@ const Navbar = () => {
           right: isOpen ? "0" : "-100%",
         }}
       >
-        <div className=" mt-4 flex  border-b border-white items-center justify-between">
+        <div className=" mt-4 flex  border-b  border-white items-center justify-between">
           <input
             type="text"
             placeholder="Search"
@@ -262,7 +269,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {isCartOpen && <ShoppingCart closeCart={closeCart} />}
 
