@@ -12,10 +12,10 @@ const ShoppingCart = ({ closeCart }) => {
     className="fixed top-0 left-0 w-full h-full bg-white   opacity-90 z-9"
     onClick={closeCart}
   ></div>
-    <div className="flex flex-col  items-center justify-start z-99 absolute md:w-[32%] w-[80%] h-screen bg-[#899387] top-0 right-0  text-white px-6 ">
-      <div className="flex h-screen flex-col items-center justify-between ">
+    <div className="flex flex-col  items-center justify-start z-99 absolute md:w-[32%] w-[90%] h-screen bg-[#899387] top-0 right-0  text-white px-6 ">
+      <div className="flex h-screen flex-col items-center md:justify-between ">
         <div className="flex flex-col items-center justify-center">
-        <h1 className="text-[0.8rem] px-8 py-8">Your Cart({cartItems.length})</h1>
+        <h1 className="text-[0.7rem] px-8 py-8">Your Cart({cartItems.length})</h1>
         <div className="absolute top-[2.5rem] right-[1.6rem]">
           <button onClick={closeCart}>
             <IoClose className="h-5 w-5 " />
@@ -24,7 +24,7 @@ const ShoppingCart = ({ closeCart }) => {
      
 
       <div className="w-full border-b-[1px] border-white "></div>
-      <div className="w-full h-80  overflow-y-auto">
+      <div className="w-full md:h-80 h-96 overflow-y-auto">
         {cartItems.map((item) => (
           <>
             <div
@@ -73,19 +73,19 @@ const ShoppingCart = ({ closeCart }) => {
       <div className="w-full border-b-[1px] border-white "></div>
       </div>
 
-      <div className="w-full flex items-center  flex-col px-4 pb-8">
-        <div className="flex items-start justify-between gap-20 pb-10">
-          <p className="w-1/2 ">
+      <div className="w-full flex items-center  flex-col px-4 pb-8 ">
+        <div className="flex items-start justify-between gap-20 py-6">
+          <p className="md:w-1/2 ">
             All orders will be processed in NZD. Shipping calculated during
             checkout.
           </p>
-          <span className="w-1/2 ">
+          <span className="md:w-1/2 ">
             <p className="text-[0.8rem] pb-6">Total:</p>
             <p className="text-[1rem]"> ${getCartTotal() / 100}.00</p>
           </span>
         </div>
        
-        <button className=" w-full bg-[#899387] text-white text-[0.9rem] px-20 py-4 border-[1px] border-white hover:bg-[#425D4B] ">
+        <button className=" w-full bg-[#899387] text-white text-[0.9rem] md:px-20 py-4 border-[1px] border-white hover:bg-[#425D4B] ">
           Proceed to Checkout
         </button>
       </div>
