@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 const Categories = () => {
   return (
     <div className="flex-1">
-      {/* <Navbar/> */}
+
       <Outlet/>
     </div>
   );

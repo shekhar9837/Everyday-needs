@@ -24,7 +24,7 @@ import SearchResults from "./components/SearchResults";
 
 const App = ()=> {
   return (
-    <>
+    < >
     <Navbar />
     <Outlet />
     <Footer />

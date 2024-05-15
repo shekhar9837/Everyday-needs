@@ -42,7 +42,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky bg-white top-0 z-10 flex items-center text-xs relative">
+<>
+
+    <nav className="sticky bg-white top-0 z-10 flex items-center text-xs relative z-2">
       <div className="w-full flex items-center justify-between md:px-0 px-2">
         <div className="md:w-[15%] flex items-center justify-center">
           <div onClick={toggleMenu} className="md:hidden">
@@ -143,6 +145,7 @@ const Navbar = () => {
         </div>
       </div>
 
+      
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -249,7 +252,8 @@ const Navbar = () => {
 
       {isCartOpen && <ShoppingCart closeCart={closeCart} />}
 
-    </nav>
+    </nav></>
+
   );
 };
 

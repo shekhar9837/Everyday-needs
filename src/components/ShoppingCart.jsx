@@ -15,7 +15,7 @@ const ShoppingCart = ({ closeCart }) => {
       <motion.div
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
-        exit={{ x: "100%" }} // Define exit animation here
+        exit={{ x: "100%" }} 
         transition={{
           type: "spring",
           stiffness: 200,
