@@ -61,27 +61,32 @@ const ScrollableContent = () => {
           </div>
          </Link>  
         </div>
+        
         <div className="flex md:flex-row flex-col  justify-center md:px-24 px-4 py-24 gap-20">
           <div className="md:w-1/6 p-2">
             <h1 className="text-[2rem] leading-none">The</h1>
             <h1 className="text-[2rem] leading-none">Journal</h1>
+            <Link to="pages/the-journal" onClick={PageUp}>
             <h5 className="text-[0.8rem] border-b-[1px] border-black inline-block pt-6">
               View Journal
             </h5>
+            </Link>
             <p className="text-[0.8rem] pt-8 md:px-1 px-16">
               We believe everyday items have the ability to add to the beauty of
               our living spaces. The Journal showcases our products in homes,
               both of real customers and the campaign shoots styled by us.
             </p>
           </div>
-
-          <div className="md:w-1/3 flex flex-col items-center p-2">
+          <div className="md:w-1/3 p-2">
+          <Link onClick={PageUp} to="pages/the-journal" className="flex flex-col items-center">
             <img src="/img/Journal.webp" alt="" />
             <h5 className="text-[0.8rem]  border-b-[1px] border-black inline">
               View
             </h5>
+          </Link>
           </div>
         </div>
+    
       </div>
     </div>
   );

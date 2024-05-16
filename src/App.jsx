@@ -21,6 +21,7 @@ import AboutUs from "./Pages/AboutUs";
 import BackInStock from "./components/Categories/BackInStock";
 import New from "./components/Categories/New";
 import SearchResults from "./components/SearchResults";
+import TheJournal from "./Pages/TheJournal";
 
 const App = ()=> {
   return (
@@ -110,6 +111,10 @@ const router = createBrowserRouter([
     {
       path:'pages/about-us',
       element:<AboutUs/>
+    },
+    {
+      path:'pages/the-journal',
+      element:<TheJournal/>
     },
     {
       path:'search-results',
