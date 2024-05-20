@@ -120,7 +120,10 @@ const router = createBrowserRouter([
       path:'search-results',
       element:<SearchResults/>
     },
-  
+    {
+      path: "search-results",
+     element: <SearchResults /> 
+    },
     ],
   },
 ]);
