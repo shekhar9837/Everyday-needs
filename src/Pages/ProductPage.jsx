@@ -1,14 +1,29 @@
 // ProductPage.js
-import React,{useContext} from "react";
+import React,{useContext, useState} from "react";
 import { useParams } from "react-router-dom";
 import { data } from "../data.js";
 import { CartContext } from '../Context/Cart'
+import Notification from "../components/Notification.jsx";
+import { motion } from "framer-motion";
 
 
 const ProductPage = () => {
+  
   const { handle } = useParams();
   const product = data.find((item) => item.handle === handle);
   const { addToCart} = useContext(CartContext);
+
+  const [notification, setNotification] = useState(null);
+
+  const handleAddToCart = () => {
+    addToCart(product)
+    // Add item to cart logic
+    setNotification("Item added to cart successfully!");
+    // Clear notification after a certain time
+    setTimeout(() => {
+      setNotification(null);
+    }, 3000); // Adjust the time as per your requirement
+  };
 
   if (!product ) {
     return <p>Product not found.</p>;
@@ -23,7 +38,16 @@ const ProductPage = () => {
   // Render the product details
   return (
     <>
-      <div className=" flex items-start justify-center ">
+     <div className="relative flex justify-center items-center top-8">
+      {notification && <motion.div initial={{ y: "-100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "100%" }}
+              transition={{ duration: 0.3 }}
+               className="notification absolute   bg-zinc-700 text-white px-4 py-2 rounded-md mt-4 mr-4 z-50">
+          {notification}
+        </motion.div>}
+      </div>
+      <div className=" flex items-start justify-center z-5">
         <div className=" flex flex-col items-center justify-between md:mt-20 mt-5  my-20">
           <div className="md:w-[70%] w-full px-6 flex justify-between items-center">
             <div className="md:w-[70%]">
@@ -49,7 +73,7 @@ const ProductPage = () => {
 
             <div className="md:w-[30%] ">
               <div>
-                <button onClick={()=> addToCart(product)} className="md:mt-0 mt-10 bg-zinc-600 text-white text-xs px-16 py-4 hover:text-black hover:bg-white border hover:border-black">
+                <button onClick={handleAddToCart} className="md:mt-0 mt-10 bg-zinc-600 text-white text-xs px-16 py-4 hover:text-black hover:bg-white border hover:border-black">
                   Add to Cart
                 </button>
               </div>

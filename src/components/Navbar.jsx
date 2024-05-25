@@ -36,6 +36,9 @@ const Navbar = () => {
     setIsCartOpen(false);
   };
 
+  const handleSearch = () => {
+    setIsOpen(false);
+  };
  
 
   return (
@@ -139,40 +142,29 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ duration: 0.3 }}
-              className="md:hidden fixed flex flex-col items-start justify-start inset-0 bg-[#899387] w-[80%] px-6"
+              className="md:hidden fixed flex flex-col items-start justify-start inset-0 bg-[#899387] w-[90%] px-6"
               style={{
                 maxWidth: "400px",
               }}
             >
               <div className="mt-4 flex items-center w-full">
                 <div className="flex w-full">
-                  <SearchInput iconColor="text-white" inputWidth="w-[12rem] bg-red-400 border-b-[1px] border-white"/>
+                  <SearchInput onSearch={handleSearch} iconColor="text-white" inputWidth="w-[12rem] bg-red-400 border-b-[1px] border-white"/>
                   <IoClose
-                    className={`h-4 w-4 absolute top-5 right-8 text-white`}
+                    className={`h-5 w-5 absolute top-5 right-6 text-white`}
                     onClick={toggleMenu}
                   />
                 </div>
               </div>
-              <div className="flex gap-10 text-[0.9rem] text-white mt-8 ">
+              <div className="flex gap-20 text-[0.9rem] text-white mt-8 ">
                 <div className=" ">
                   <ul className="">
-                    <li>Home</li>
-                    <li>Instagram</li>
-                    <li>Facebook</li>
-                  </ul>
-                  <div className="border-b border-white w-3 mt-3 mb-3"></div>
-                  <ul>
-                    <li>The Makers</li>
-                    <li>The Journal</li>
-                    <li>The Edit</li>
-                  </ul>
-                  <div className="border-b border-white w-3 mt-3 mb-3"></div>
-                  <ul>
-                    <li>Payments</li>
-                    <li>Shipping</li>
-                    <li>Returns</li>
-                    <li>Terms</li>
-                  </ul>
+                    <Link to='/'>  <li>Home</li></Link>
+                    <Link to="https://www.instagram.com" target="_blank" rel="noopener noreferrer">   <li>Instagram</li></Link>
+                    <Link to="https://www.facebook.com" target="_blank" rel="noopener noreferrer">   <li>Facebook</li></Link>
+       
+                  </ul>                           
+                 
                   
                  
                

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 
-const SearchInput = ({iconColor="text-black" , inputWidth='w-12 focus:w-16 hover:w-16  transition-all ease-in-out duration-500 focus:border-b-[1px] hover:border-b-[1px] border-zinc-400', closeCart}) => {
+const SearchInput = ({iconColor="text-black" , inputWidth='w-12 focus:w-16 hover:w-16  transition-all ease-in-out duration-500 focus:border-b-[1px] hover:border-b-[1px] border-zinc-400', onSearch}) => {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
@@ -12,9 +12,15 @@ const SearchInput = ({iconColor="text-black" , inputWidth='w-12 focus:w-16 hover
   };
 
   const handleSearch = () => {
-    navigate(`/search-results?q=${query}`);
-    setQuery("");
+    if (query.trim()) {
+      navigate(`/search-results?q=${query}`);
+      setQuery("");
+      if (onSearch) {
+        onSearch();
+      }
+    }
   };
+
 
   return (
     <div className="flex items-center pt-[0.2rem]">

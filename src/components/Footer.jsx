@@ -1,15 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const PageUp = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsOpen(false);
+  };
   return (
     <div className="w-full  relative  md:my-40">
       <div className="flex md:flex-row flex-col-reverse md:px-0 px-2">
         <div className="flex  flex-row   md:px-10 px-4  md:py-20  md:gap-20 gap-10  md:absolute top-[70%]">
           <div className="text-[0.8rem]">
             <ul className="block ">
-              <li>About</li>
-              <li>Instagram</li>
-              <li>Facebook</li>
+              <Link onClick={PageUp} to='pages/about-us'>  <li>About</li></Link>
+              <Link to="https://www.instagram.com" target="_blank" rel="noopener noreferrer">   <li>Instagram</li></Link>
+                    <Link to="https://www.facebook.com" target="_blank" rel="noopener noreferrer">   <li>Facebook</li></Link>
             </ul>
             <ul className="py-4">
               <li>Terms</li>
@@ -19,7 +24,8 @@ const Footer = () => {
               <li>Refund policy</li>
             </ul>
             <ul className="py-4 md:flex hidden ">
-              <li>site By Shekhar</li>
+              <Link to='https://github.com/shekhar1378' target="_blank" rel="noopener noreferrer"> <li>site By ❤️</li></Link>
+             
             </ul>
           </div>
          
