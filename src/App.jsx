@@ -22,6 +22,7 @@ import BackInStock from "./components/Categories/BackInStock";
 import New from "./components/Categories/New";
 import SearchResults from "./components/SearchResults";
 import TheJournal from "./Pages/TheJournal";
+import PaymentPage from "./components/PaymentPage";
 
 const App = ()=> {
   return (
@@ -123,6 +124,10 @@ const router = createBrowserRouter([
     {
       path: "search-results",
      element: <SearchResults /> 
+    },
+    {
+      path: "checkouts",
+     element: <PaymentPage /> 
     },
     ],
   },

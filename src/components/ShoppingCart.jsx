@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { CartContext } from "../Context/Cart";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ShoppingCart = ({ closeCart }) => {
   const { cartItems, addToCart, removeFromCart, clearCart, getCartTotal } =
@@ -104,10 +105,11 @@ const ShoppingCart = ({ closeCart }) => {
                 <p className="text-[1rem]"> ${getCartTotal() / 100}.00</p>
               </span>
             </div>
-
-            <button className=" w-full bg-[#899387] text-white text-[0.9rem] md:px-20 py-4 border-[1px] border-white hover:bg-[#425D4B] ">
+              <Link to='checkouts'>
+            <button onClick={closeCart} className=" w-full bg-[#899387] text-white text-[0.9rem] md:px-20 py-4 border-[1px] border-white hover:bg-[#425D4B] ">
               Proceed to Checkout
             </button>
+              </Link>
           </div>
         </div>
       </motion.div>
