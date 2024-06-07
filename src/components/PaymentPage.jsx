@@ -7,7 +7,7 @@ const PaymentPage = () => {
   return (
     <div className="flex md:flex-row flex-col py-10 items-start justify-center min-h-screen md:gap-20">
       <div className="flex flex-col">
-        <div className="flex flex-row">
+        <div className="flex md:flex-row flex-col">
           <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
             <h2 className="text-3xl font-bold text-center mb-6">Payment Checkout</h2>
             <form>
