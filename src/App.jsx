@@ -1,4 +1,4 @@
-import { createBrowserRouter,Outlet } from "react-router-dom";
+import { createBrowserRouter, Outlet } from "react-router-dom";
 import HomePage from "./components/HomePage";
 import Navbar from "./components/Navbar";
 import ShopAll from "./components/Categories/ShopAll";
@@ -24,19 +24,20 @@ import SearchResults from "./components/SearchResults";
 import TheJournal from "./Pages/TheJournal";
 import PaymentPage from "./components/PaymentPage";
 
-const App = ()=> {
+const App = () => {
   return (
-    < >
-    <Navbar />
-    <Outlet />
-    <Footer />
-  </>
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </>
   );
-}
+};
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
@@ -44,91 +45,87 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-          path:"categories",
-          element: <Categories/>,
-          children:[
-            {
-              path:'all',
-              element: <ShopAll/>,
-            },
-            {
-              path:'new',
-              element: <New/>,
-            },
-            {
-              path:'back-in-stock',
-              element: <BackInStock/>,
-            },
-            {
-              path:'bedroom',
-              element: <Bedroom/>,
-            },
-            {
-              path:'bathroom',
-              element: <Bathroom/>,
-            },
-            {
-              path:'houseKeeping',
-              element: <HouseKeeping/>,
-            },
-            {
-              path:'kitchen-table',
-              element: <KitchenTable/>,
-            },
-            {
-              path:'living',
-              element: <Living/>,
-            },
-            {
-              path:'outdoors',
-              element: <Outdoors/>,
-            },
-            {
-              path:'apparel',
-              element: <Apparel/>,
-            },
-            {
-              path:'baby-child',
-              element: <BabyChild/>,
-            },
-            {
-              path:'office-paper',
-              element: <OfficePaper/>,
-            },
-            {
-              path:'gifting',
-              element: <Gifting/>,
-            },
-            {
-              path:'sale',
-              element: <Sale/>,
-            },
-          ]
+        path: "categories",
+        element: <Categories />,
+        children: [
+          {
+            path: "all",
+            element: <ShopAll />,
+          },
+          {
+            path: "new",
+            element: <New />,
+          },
+          {
+            path: "back-in-stock",
+            element: <BackInStock />,
+          },
+          {
+            path: "bedroom",
+            element: <Bedroom />,
+          },
+          {
+            path: "bathroom",
+            element: <Bathroom />,
+          },
+          {
+            path: "housekeeping",
+            element: <HouseKeeping />,
+          },
+          {
+            path: "kitchen-table",
+            element: <KitchenTable />,
+          },
+          {
+            path: "living",
+            element: <Living />,
+          },
+          {
+            path: "outdoors",
+            element: <Outdoors />,
+          },
+          {
+            path: "apparel",
+            element: <Apparel />,
+          },
+          {
+            path: "baby-child",
+            element: <BabyChild />,
+          },
+          {
+            path: "office-paper",
+            element: <OfficePaper />,
+          },
+          {
+            path: "gifting",
+            element: <Gifting />,
+          },
+          {
+            path: "sale",
+            element: <Sale />,
+          },
+        ],
       },
-    {
-      path:'products/:handle',
-      element:<ProductPage/>
-    },
-    {
-      path:'pages/about-us',
-      element:<AboutUs/>
-    },
-    {
-      path:'pages/the-journal',
-      element:<TheJournal/>
-    },
-    {
-      path:'search-results',
-      element:<SearchResults/>
-    },
-    {
-      path: "search-results",
-     element: <SearchResults /> 
-    },
-    {
-      path: "checkouts",
-     element: <PaymentPage /> 
-    },
+      {
+        path: "products/:handle",
+        element: <ProductPage />,
+      },
+      {
+        path: "pages/about-us",
+        element: <AboutUs />,
+      },
+      {
+        path: "pages/the-journal",
+        element: <TheJournal />,
+      },
+      {
+        path: "search-results",
+        element: <SearchResults />,
+      },
+      {
+        path: "checkouts",
+        element: <PaymentPage />,
+      },
     ],
   },
 ]);
