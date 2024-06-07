@@ -94,8 +94,8 @@ const ShoppingCart = ({ closeCart }) => {
             </div>
           </div>
 
-          <div className="w-full flex items-center  flex-col px-4 pb-8 ">
-            <div className="flex items-start justify-between gap-20 py-6">
+          <div className=" w-full flex items-center  flex-col px-4 pb-8 ">
+            <div className="w-full flex items-start justify-between gap-20 py-6">
               <p className="md:w-1/2 ">
                 All orders will be processed in NZD. Shipping calculated during
                 checkout.
@@ -105,11 +105,13 @@ const ShoppingCart = ({ closeCart }) => {
                 <p className="text-[1rem]"> ${getCartTotal() / 100}.00</p>
               </span>
             </div>
+            <div className="w-full ">
               <Link to='checkouts'>
-            <button onClick={closeCart} className=" w-full bg-[#899387] text-white text-[0.9rem] md:px-20 py-4 border-[1px] border-white hover:bg-[#425D4B] ">
+            <button onClick={closeCart} className="w-full  bg-[#899387] text-white text-[0.9rem] md:px-20 px-4 py-4 border-[1px] border-white hover:bg-[#425D4B] ">
               Proceed to Checkout
             </button>
               </Link>
+              </div>
           </div>
         </div>
       </motion.div>
