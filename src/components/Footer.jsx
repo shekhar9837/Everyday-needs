@@ -45,7 +45,7 @@ const Footer = () => {
       </div>
       <div className="md:hidden flex items-center justify-center">
           <ul className="py-4  ">
-              <li>site By Shekhar</li>
+          <Link to='https://github.com/shekhar1378' target="_blank" rel="noopener noreferrer"> <li>site By ❤️</li></Link>
             </ul>
           </div>
     </div>
