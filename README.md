@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/fevicon.webp" alt="logo" width="100" height="100">
+  <img src="screenshots/fevicon.webp" alt="logo" width="100" height="100">
 </p>
 
 <h1 align="center">About the project</h1>
