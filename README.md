@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/fevicon.webp" alt="logo">
+  <img src="screenshots/fevicon.webp" alt="logo">
 </p>
 
 <h1 align="center">About the project</h1>
@@ -22,15 +22,15 @@
 
 <h3 align="center">Home Page 🏡</h3>
 <p align="center">
-  <img src="screenshots/homepage.png" alt="Homepage">
+  <img src="screenshots/homepage.jpeg" alt="Homepage">
 </p>
 
 <h3 align="center">Product Page 🎁</h3>
 <p align="center">
-  <img src="screenshots/product-page.png" alt="Product Page">
+  <img src="screenshots/product-page.jpeg" alt="Product Page">
 </p>
 
 <h3 align="center">Categories Page 👇</h3>
 <p align="center">
-  <img src="screenshots/product-detail-page.png" alt="Categories Page">
+  <img src="screenshots/product-detail-page.jpeg" alt="Categories Page">
 </p>
