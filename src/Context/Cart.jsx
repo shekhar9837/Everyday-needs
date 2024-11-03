@@ -35,9 +35,13 @@ export const CartProvider =({children})=>{
         ))) 
     
     }
-    const clearCart = (itemToRemove) => {
-        const updatedCartItems = cartItems.filter(item => item.id !== itemToRemove.id);
-        setCartItems(updatedCartItems);
+    const clearCart = (itemToRemove = null) => {
+        if (itemToRemove) {
+            const updatedCartItems = cartItems.filter(item => item.id !== itemToRemove.id);
+            setCartItems(updatedCartItems);
+        } else {
+            setCartItems([]); // Clears the cart if no item is specified
+        }
     };
     
     const getCartTotal=(item)=> {
